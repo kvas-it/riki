@@ -5,7 +5,7 @@
   "homepage": "https://github.com/kvas-it/riki",
   "bugs": "https://github.com/kvas-it/riki/issues",
   "license": "MIT",
-  "main": "lib/riki.js",
+  "main": "lib/index.js",
   "author": {
     "name": "Vasily Kuznetsov",
     "email": "kvas.it@gmail.com"

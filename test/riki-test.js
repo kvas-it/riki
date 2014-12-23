@@ -1,7 +1,7 @@
 'use strict';
 
 var riki = require('../');
-var assert = require('should');
+require('should');
 
 describe('riki', function () {
 
