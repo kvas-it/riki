@@ -5,8 +5,8 @@ var assert = require('should');
 
 describe('riki', function () {
 
-  it('should be awesome', function () {
-    riki().should.equal('awesome');
-  });
+    it('should be awesome', function () {
+        riki().should.equal('awesome');
+    });
 
 });
