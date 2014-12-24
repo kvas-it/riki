@@ -5,7 +5,7 @@
   "homepage": "https://github.com/kvas-it/riki",
   "bugs": "https://github.com/kvas-it/riki/issues",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "lib/index.coffee",
   "author": {
     "name": "Vasily Kuznetsov",
     "email": "kvas.it@gmail.com"
@@ -14,11 +14,12 @@
     "type": "git",
     "url": "https://github.com/kvas-it/riki"
   },
-  "keywords":[],
+  "keywords": [],
   "dependencies": {
-    "lodash": "2.4.1",
     "bluebird": "2.4.2",
-    "debug": "2.1.0"
+    "coffee-script": "^1.8.0",
+    "debug": "2.1.0",
+    "lodash": "2.4.1"
   },
   "devDependencies": {
     "gulp": "^3.8.8",
