@@ -26,6 +26,14 @@ class TestStorage
         @data[type][id] = obj
         P.resolve id
 
-    getObject: (type, id) -> P.resolve @data[type][id]
+    getObject: (type, id) ->
+        if type of @data
+            if id of @data[type]
+                P.resolve @data[type][id]
+            else
+                P.reject (new Error 'Object of type "' + type +
+                                    '" with id ' + id + ' not found')
+        else
+            P.reject (new Error 'Type "' + type + '" not found')
 
 module.exports = TestStorage
