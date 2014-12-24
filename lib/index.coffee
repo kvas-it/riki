@@ -18,6 +18,12 @@ class Riki
   getType: (name) ->
     @storage.getType name
 
+  addObject: (type, data) ->
+    @storage.addObject type, data
+
+  getObject: (type, id) ->
+    @storage.getObject type, id
+
 
 riki = (options = {}) -> new Riki options
 riki.TestStorage = TestStorage
