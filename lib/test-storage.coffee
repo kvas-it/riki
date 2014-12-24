@@ -1,12 +1,12 @@
 ###
-Simple testing storage.
+Basic testing storage for riki.
 ###
 
 P = require 'bluebird'
 
 class TestStorage
 
-    constructor: () ->
+    constructor: ->
         @types = {}
         @data = {}
 
