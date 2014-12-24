@@ -6,10 +6,10 @@ var gulp   = require('gulp');
 var plugins = require('gulp-load-plugins')();
 
 var paths = {
-    lint: ['./gulpfile.js', './lib/**/*.js'],
+    lint: ['./lib/**/*.coffee', './test/**/*.coffee'],
     watch: ['./gulpfile.js', './lib/**', './test/**/*.js', '!test/{temp,temp/**}'],
     tests: ['./test/**/*.coffee', '!test/{temp,temp/**}'],
-    source: ['./lib/*.coffee']
+    source: ['./lib/**/*.coffee']
 };
 
 var plumberConf = {};
@@ -21,7 +21,7 @@ if (process.env.CI) {
 }
 
 gulp.task('lint', function () {
-    gulp.src(paths.source)
+    gulp.src(paths.lint)
     .pipe(plugins.coffeelint())
     .pipe(plugins.coffeelint.reporter());
 });
