@@ -12,6 +12,12 @@ class Riki
   constructor: (options) ->
     @storage = options.storage or new TestStorage
 
+  addType: (name, type) ->
+    @storage.addType name, type
+
+  getType: (name) ->
+    @storage.getType name
+
 
 riki = (options = {}) -> new Riki options
 riki.TestStorage = TestStorage
