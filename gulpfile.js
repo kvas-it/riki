@@ -21,11 +21,9 @@ if (process.env.CI) {
 }
 
 gulp.task('lint', function () {
-    return gulp.src(paths.lint)
-    .pipe(plugins.jshint('.jshintrc'))
-    .pipe(plugins.plumber(plumberConf))
-    .pipe(plugins.jscs())
-    .pipe(plugins.jshint.reporter('jshint-stylish'));
+    gulp.src(paths.source)
+    .pipe(plugins.coffeelint())
+    .pipe(plugins.coffeelint.reporter());
 });
 
 gulp.task('istanbul', function (cb) {
