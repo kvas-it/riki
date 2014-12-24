@@ -1,6 +1,4 @@
-###
-Basic testing storage for riki.
-###
+# Basic storage for riki (mostly for testing usage).
 
 P = require 'bluebird'
 
