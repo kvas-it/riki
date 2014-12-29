@@ -25,6 +25,15 @@ describe 'riki', ->
         type.id.should.eql 'http://localhost/types/test-type'
         type.$schema.should.eql 'http://json-schema.org/draft-04/schema#'
         type.type.should.eql 'object'
+      .then ->
+        rk.addType 'external-type',
+          id: 'http://org.org/type.json',
+          type: 'number'
+      .then ->
+        rk.getType 'external-type'
+      .then (type) ->
+        type.id.should.eql 'http://org.org/type.json'
+        type.type.should.eql 'number'
 
   it 'should fail when getting nonexistent type', ->
     rk.getType 'missing-type'
